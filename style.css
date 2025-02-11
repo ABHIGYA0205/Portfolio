@@ -78,32 +78,22 @@ body {
 
 .nav-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    font-size: 19px;
+    font-size: 18px;
     font-family: 'futura';
     text-transform: uppercase;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    color: var(--accent);
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
 
-.logo:hover {
-    transform: scale(1.05);
-}
+
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    justify-content: space-around;
+    gap: 5rem;
 }
 
 .nav-links a {
@@ -735,5 +725,40 @@ Project Card Styles
     filter: blur(10px); /* Apply a blur effect on the cursor */
 }
 
+@media (max-width: 768px) {
+    .nav-content{
+        font-size: 12px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-logo, .footer-links, .footer-social {
+        margin-bottom: 1rem;
+    }
 
+    .footer-links {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        gap: 1rem;
+    }
 
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-content{
+        font-size: 10px;
+        
+        
+        }
+        .nav-links{
+            gap: 2rem;
+        }
+}
